@@ -1,0 +1,13 @@
+{
+  "name": "komorebi-japanese",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Japanese and everyday culture in the Skepsis learning family",
+  "license": "MIT",
+  "scripts": {
+    "validate": "node app/tools/validate.js",
+    "test": "node --test app/test/*.test.js",
+    "build": "node app/build.mjs",
+    "preview": "python3 -m http.server 8018 --directory dist"
+  }
+}
