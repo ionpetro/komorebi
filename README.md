@@ -64,4 +64,4 @@ The build produces `dist/`, including the app, searchable glossary, About, sourc
 
 Adapted from the user’s MIT-licensed Guanxi and Skepsis family code. The project and original lesson content are MIT licensed. Reference sites retain their respective rights; source links do not imply endorsement or relicense third-party material.
 
-See [Skepsis](https://tryskepsis.com), [Guanxi](https://guanxi-mandarin.vercel.app), [Carpe](https://carpe-latin.vercel.app) and [Gnothi](https://gnothi-greek.vercel.app).
+See [Skepsis](https://tryskepsis.com), [Guanxi](https://guanxi.tryskepsis.com), [Carpe](https://carpe.tryskepsis.com) and [Gnothi](https://gnothi.tryskepsis.com).
