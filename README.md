@@ -4,6 +4,26 @@ A Japanese language and culture course in Ion Petropoulos’s Skepsis learning f
 
 The interface deliberately retains the family’s narrow frame, Nunito typography, dimensional buttons, mascot bubble, lesson stones, Learn / Words / Me navigation, daily goal and full-screen practice. Indigo, paper, a fox companion and chapter stamps give it its own character.
 
+## Open source, and the family
+
+Komorebi is free and open source (MIT). **If it helps you, please [star the repo](https://github.com/ionpetro/komorebi)**: a star helps other people find it. Corrections and pull requests are welcome.
+
+**Play:** [komorebi.tryskepsis.com](https://komorebi.tryskepsis.com)
+
+Komorebi is one of nine free, open-source learning apps built the same way (short daily lessons and spaced review):
+
+| | App | What it teaches | Links |
+|:-:|---|---|---|
+| <img src="https://tryskepsis.com/icon-192.png" width="40" height="40" alt="Skepsis logo"> | **Skepsis** | the Greek hiding in everyday English | [Play](https://tryskepsis.com) · [GitHub](https://github.com/ionpetro/skepsis) |
+| <img src="https://carpe.tryskepsis.com/icon.svg" width="40" height="40" alt="Carpe logo"> | **Carpe** | Latin for Greece's national exams | [Play](https://carpe.tryskepsis.com) · [GitHub](https://github.com/ionpetro/carpe) |
+| <img src="https://gnothi.tryskepsis.com/icon.svg" width="40" height="40" alt="Gnothi logo"> | **Gnothi** | Ancient Greek for Greece's national exams | [Play](https://gnothi.tryskepsis.com) · [GitHub](https://github.com/ionpetro/gnothi) |
+| <img src="https://objection.tryskepsis.com/icon.svg" width="40" height="40" alt="Objection logo"> | **Objection** | prep for the US bar exam (MBE) | [Play](https://objection.tryskepsis.com) · [GitHub](https://github.com/ionpetro/objection) |
+| <img src="https://agora.tryskepsis.com/icon.svg" width="40" height="40" alt="Agora logo"> | **Agora** | sales and negotiation, with ethics | [Play](https://agora.tryskepsis.com) · [GitHub](https://github.com/ionpetro/agora) |
+| <img src="https://oikos.tryskepsis.com/icon.svg" width="40" height="40" alt="Oikos logo"> | **Oikos** | economics and incentives | [Play](https://oikos.tryskepsis.com) · [GitHub](https://github.com/ionpetro/oikos) |
+| <img src="https://guanxi.tryskepsis.com/icon.svg" width="40" height="40" alt="Guanxi logo"> | **Guanxi** | Mandarin and local culture | [Play](https://guanxi.tryskepsis.com) · [GitHub](https://github.com/ionpetro/guanxi) |
+| <img src="https://ethics.tryskepsis.com/icon.svg" width="40" height="40" alt="Everyday Ethics logo"> | **Everyday Ethics** | everyday choices and ethical judgment | [Play](https://ethics.tryskepsis.com) · [GitHub](https://github.com/ionpetro/everyday-ethics) |
+| <img src="https://komorebi.tryskepsis.com/icon.svg" width="40" height="40" alt="Komorebi logo"> | **Komorebi** (this one) | Japanese through everyday life | [Play](https://komorebi.tryskepsis.com) · [GitHub](https://github.com/ionpetro/komorebi) |
+
 ## Course
 
 - 12 units, 60 original lessons and 480 lesson items.
