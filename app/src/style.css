@@ -522,3 +522,6 @@ ruby{ruby-position:over}rt{font-family:"Noto Sans JP",sans-serif;font-size:max(1
 @media (min-width:900px){body{background-image:radial-gradient(var(--line) .7px,transparent .7px);background-size:18px 18px}#app{background:var(--bg);box-shadow:0 0 80px rgba(20,30,60,.04);padding-inline:24px}.topbar{padding-block:16px}}
 @media (max-width:380px){.wordmark{font-size:21px}.goalring{gap:8px}.goalring .btn{padding:10px 12px}.stampbook{grid-template-columns:repeat(3,1fr)}.resgrid{gap:7px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+/* The results screen adds the lesson dialogue (and the star card), which can be taller than the
+   screen; the overlay is fixed and the body is locked, so the results area itself must scroll. */
+.lesson-inner > .results { min-height: 0; overflow-y: auto; justify-content: safe center; }
