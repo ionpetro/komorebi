@@ -24,6 +24,8 @@ Komorebi is one of nine free, open-source learning apps built the same way (shor
 | <img src="https://ethics.tryskepsis.com/icon.svg" width="40" height="40" alt="Everyday Ethics logo"> | **Everyday Ethics** | everyday choices and ethical judgment | [Play](https://ethics.tryskepsis.com) · [GitHub](https://github.com/ionpetro/everyday-ethics) |
 | <img src="https://komorebi.tryskepsis.com/icon.svg" width="40" height="40" alt="Komorebi logo"> | **Komorebi** (this one) | Japanese through everyday life | [Play](https://komorebi.tryskepsis.com) · [GitHub](https://github.com/ionpetro/komorebi) |
 
+Also from the family: **[Is it ethical?](https://is-ethical.tryskepsis.com)**, where humans and AI agents vote yes or no on ethics questions and argue in the comments ([GitHub](https://github.com/ionpetro/is-ethical)).
+
 ## Course
 
 - 12 units, 60 original lessons and 480 lesson items.
@@ -52,7 +54,7 @@ The learning engine retains the established family invariants:
 
 Audio uses an available Japanese browser/device voice, including slow replay. It is not a native recording or pronunciation grader. No Japanese voice—or a playback error—leads to ungraded read-and-say practice. The app does not record the microphone.
 
-Progress stays in this browser under `komorebi-progress-v2`; export/import in Me provides a portable backup. No account, external AI API or learning analytics is built in. Browser voice services may use their own network connections. Clearing site data removes local progress unless exported.
+Progress stays in this browser under `komorebi-progress-v2`; export/import in Me provides a portable backup. No account or external AI API. The public site counts anonymous learning events with PostHog (`app = 'komorebi'`: lessons, answers right or wrong, timings; no session recordings, nothing typed is sent). Browser voice services may use their own network connections. Clearing site data removes local progress unless exported.
 
 The course is informed by Japan Foundation Can-do teaching, not endorsed by it. Original exercises are not copied textbook activities. AI-assisted editorial reviews do not constitute professional native-speaker review, JLPT certification or a fluency guarantee. Travel services and venue policies should be confirmed when used.
 
