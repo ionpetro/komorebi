@@ -525,3 +525,10 @@ ruby{ruby-position:over}rt{font-family:"Noto Sans JP",sans-serif;font-size:max(1
 /* The results screen adds the lesson dialogue (and the star card), which can be taller than the
    screen; the overlay is fixed and the body is locked, so the results area itself must scroll. */
 .lesson-inner > .results { min-height: 0; overflow-y: auto; justify-content: safe center; }
+/* Star prompt, made prominent: sits right under the score, gold frame and a gold button. */
+.starask.starask-big { max-width: 460px; padding: 18px 20px; gap: 14px; border: 3px solid var(--gold); background: color-mix(in srgb, var(--gold) 12%, var(--surface)); box-shadow: 0 4px 0 var(--gold-deep); }
+.starask-big .starask-text b { display: flex; align-items: center; gap: 8px; font-size: 20px; }
+.starask-big .starask-text span { font-size: 15px; }
+.starask-icon { display: inline-flex; color: var(--gold); }
+.starask-icon svg { width: 22px; height: 22px; }
+.starask-big .star-cta { font-size: 17px; min-height: 52px; }
