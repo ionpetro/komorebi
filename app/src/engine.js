@@ -58,13 +58,15 @@ const Engine = (() => {
     const out={advanced:false,usedFreeze:0,reset:false}; const wk=weekKey(today);
     if(s.freezeWeek!==wk){s.freezeWeek=wk;s.freezes=Math.max(1,s.freezes||0);}
     if(s.lastDay===today)return out;
-    if(!s.lastDay||s.lastDay>today)s.streak=1;
+    // a saved day ahead of this device's today (travel west, clock moved back) keeps the streak; more than a day ahead was a wrong clock
+    if(s.lastDay&&s.lastDay>today){if(s.lastDay>addDays(today,1))s.lastDay=today;return out;}
+    if(!s.lastDay)s.streak=1;
     else {const gap=missedWeekdays(s.lastDay,today); if(gap>(s.freezes||0)){s.streak=1;out.reset=true;}else{s.streak++;s.freezes-=gap;out.usedFreeze=gap;}}
     out.advanced=true;s.lastDay=today;s.bestStreak=Math.max(s.bestStreak,s.streak);
     if(s.streak%7===0)s.freezes=Math.min(2,s.freezes+1);
     return out;
   }
-  function liveStreak(s,today) {if(!s.lastDay||s.lastDay>today)return 0;const effectiveFreezes=s.freezeWeek!==weekKey(today)?Math.max(1,s.freezes||0):s.freezes;return s.lastDay===today||missedWeekdays(s.lastDay,today)<=effectiveFreezes?s.streak:0;}
+  function liveStreak(s,today) {if(!s.lastDay)return 0;if(s.lastDay>today)return s.streak;const effectiveFreezes=s.freezeWeek!==weekKey(today)?Math.max(1,s.freezes||0):s.freezes;return s.lastDay===today||missedWeekdays(s.lastDay,today)<=effectiveFreezes?s.streak:0;}
 
   function addXp(s,today,n){n=Math.max(0,Math.round(n)); s.xp+=n;s.days[today]=(Number(s.days[today])||0)+n;}
   function rankOf(s){let rank=RANKS[0];for(const r of RANKS)if(s.xp>=r.xp)rank=r;return {rank,next:RANKS[RANKS.indexOf(rank)+1]||null};}
@@ -111,8 +113,9 @@ const Engine = (() => {
   function learn(s,id,today){if(!s.items[id])s.items[id]={box:1,due:addDays(today,1),right:0,wrong:0};}
   function grade(s,id,correct,today){
     if(!id)return;const pre=s.items[id];const due=!!pre&&pre.due<=today;learn(s,id,today);const card=s.items[id];
-    if(correct){card.right++;if(due)card.box=Math.min(6,card.box+1);}
-    else{card.wrong++;card.box=1;s.mistakes[id]=(Number(s.mistakes[id])||0)+1;}
+    // the mistakes notebook lets a card go after two right answers in a row since its last miss
+    if(correct){card.right++;card.run=(Number(card.run)||0)+1;if(card.run>=2&&s.mistakes[id])delete s.mistakes[id];if(due)card.box=Math.min(6,card.box+1);}
+    else{card.wrong++;card.run=0;card.box=1;s.mistakes[id]=(Number(s.mistakes[id])||0)+1;}
     if(!correct||due||!pre)card.due=addDays(today,INTERVALS[card.box-1]);s.answered++;if(correct)s.correct++;
   }
   function dueItems(s,today){return Object.entries(s.items).filter(([,v])=>v&&v.due<=today).sort((a,b)=>a[1].due.localeCompare(b[1].due)).map(([id])=>id);}
