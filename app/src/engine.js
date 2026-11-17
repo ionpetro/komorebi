@@ -50,8 +50,8 @@ const Engine = (() => {
     }
     for(const [day,result]of entries(raw.daily))if(validDay(day)&&object(result)&&Number.isInteger(result.total)&&result.total>0&&Number.isFinite(Number(result.score)))s.daily[day]={score:number(result.score,result.total),total:result.total};
     for(const [id,day]of entries(raw.badges))if(validDay(day))s.badges[id]=day;
-    for(const [id,day]of entries(raw.assessmentSeen))if(/^u(?:[1-9]|1[0-2])$/.test(id)&&validDay(day))s.assessmentSeen[id]=day;
-    if(Array.isArray(raw.assessments))s.assessments=raw.assessments.filter(a=>object(a)&&/^u(?:[1-9]|1[0-2])$/.test(a.unitId)&&validDay(a.at)&&Number.isInteger(a.total)&&a.total>0&&Number.isFinite(Number(a.score))).slice(-100).map(a=>({unitId:a.unitId,at:a.at,score:number(a.score,a.total),total:a.total}));
+    for(const [id,day]of entries(raw.assessmentSeen))if(/^u(?:[1-9]|1[0-3])$/.test(id)&&validDay(day))s.assessmentSeen[id]=day;
+    if(Array.isArray(raw.assessments))s.assessments=raw.assessments.filter(a=>object(a)&&/^u(?:[1-9]|1[0-3])$/.test(a.unitId)&&validDay(a.at)&&Number.isInteger(a.total)&&a.total>0&&Number.isFinite(Number(a.score))).slice(-100).map(a=>({unitId:a.unitId,at:a.at,score:number(a.score,a.total),total:a.total}));
     return s;
   }
   function touchStreak(s,today) {
