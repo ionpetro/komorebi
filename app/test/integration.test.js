@@ -5,11 +5,13 @@ const {Engine:E} = require('../src/engine.js');
 const units=loadUnits(), ix=E.indexCourse(units);
 
 test('the complete course retains a substantial path, speaking missions and separate transfer tasks',()=>{
- assert.equal(units.length,12);
- assert.equal(ix.lessons.length,60);
+ const course=units.filter(u=>u.id!=='u13'),tutor=units.find(u=>u.id==='u13');
+ assert.equal(course.length,12);
+ assert.equal(course.flatMap(u=>u.lessons).length,60);
+ assert.ok(tutor&&tutor.lessons.length>=1,'Lessons chapter (live tutor classes) present');
  assert.ok([...ix.items.values()].filter(i=>['word','character'].includes(i.kind)).length>=240);
  for(const u of units){
-  assert.equal(u.lessons.length,5,u.id);
+  if(u.id!=='u13')assert.equal(u.lessons.length,5,u.id);
   assert.ok(u.assessment.length>=2,`${u.id}: held-out transfer tasks`);
   for(const a of u.assessment)assert.ok(a.transfer&&a.kind==='scenario');
   for(const l of u.lessons){

@@ -29,6 +29,7 @@ Also from the family: **[Is it ethical?](https://is-ethical.tryskepsis.com)**, w
 ## Course
 
 - 12 units, 60 original lessons and 480 lesson items.
+- A 13th chapter, **Lessons**, practices what was covered in live tutor classes (one Komorebi lesson per class, in `app/src/units/u13.js`).
 - 240 vocabulary entries, 60 sentence builds, 60 grammar cards, 60 culture cards and 60 lesson scenarios. Entries can recur in new contexts; this is not a distinct-word count.
 - 24 separate held-out scenario questions. Repeat attempts are labeled practice and never enter ordinary spaced review.
 - 60 original dialogues and speak-aloud field missions.

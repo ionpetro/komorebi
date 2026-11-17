@@ -10,10 +10,10 @@ function validateCourse(units,{strict=false}={}){
   for(const u of units||[]){
     if(!u||!str(u.id)){bad('unit','missing id');continue;}
     const U=u.id; if(unitIds.has(U))bad(U,'duplicate unit');unitIds.add(U);
-    if(!/^u(?:[1-9]|1[0-2])$/.test(U)&&U!=='u0_example')bad(U,'unexpected unit id');
+    if(!/^u(?:[1-9]|1[0-3])$/.test(U)&&U!=='u0_example')bad(U,'unexpected unit id');
     for(const k of ['title','blurb','place','focus'])if(!str(u[k]))bad(U,`missing ${k}`);
     if(!arr(u.lessons,1)){bad(U,'lessons missing');continue;}
-    if(strict&&U!=='u0_example'&&u.lessons.length!==5)bad(U,'expected five lessons');
+    if(strict&&U!=='u0_example'&&U!=='u13'&&u.lessons.length!==5)bad(U,'expected five lessons');
     if(u.assessment!==undefined){if(!arr(u.assessment,1))bad(U,'assessment must contain scenarios');else for(const it of u.assessment){const w=`${U}/assessment/${it?.id||'item'}`;if(!str(it?.id)||!it.id.startsWith(U+'-'))bad(w,'assessment id invalid');if(ids.has(it.id))bad(w,'duplicate id');ids.add(it.id);if(it.kind!=='scenario'||it.transfer!==true)bad(w,'assessment item must be transfer scenario');for(const k of ['title','scene','q','say','src'])if(!str(it[k]))bad(w,`missing ${k}`);if(!['general','sourced','unsure'].includes(it.status))bad(w,'status invalid');if(!arr(it.options,3)||it.options.length>4||it.options.some(o=>!str(o?.text)||!str(o?.why)))bad(w,'3–4 explained options required');if(!Number.isInteger(it.answer)||it.answer<0||it.answer>=(it.options||[]).length)bad(w,'answer index invalid');}}
     for(const l of u.lessons){const W=`${U}/${l?.id||'lesson'}`;
       if(!l||!str(l.id)){bad(W,'missing id');continue;}
