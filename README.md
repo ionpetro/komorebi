@@ -10,7 +10,7 @@ Komorebi is free and open source (MIT). **If it helps you, please [star the repo
 
 **Play:** [komorebi.tryskepsis.com](https://komorebi.tryskepsis.com)
 
-Komorebi is one of nine free, open-source learning apps built the same way (short daily lessons and spaced review):
+Komorebi is one of ten free, open-source learning apps built the same way (short daily lessons and spaced review):
 
 | | App | What it teaches | Links |
 |:-:|---|---|---|
@@ -23,6 +23,7 @@ Komorebi is one of nine free, open-source learning apps built the same way (shor
 | <img src="https://guanxi.tryskepsis.com/icon.svg" width="40" height="40" alt="Guanxi logo"> | **Guanxi** | Mandarin and local culture | [Play](https://guanxi.tryskepsis.com) · [GitHub](https://github.com/ionpetro/guanxi) |
 | <img src="https://ethics.tryskepsis.com/icon.svg" width="40" height="40" alt="Everyday Ethics logo"> | **Everyday Ethics** | everyday choices and ethical judgment | [Play](https://ethics.tryskepsis.com) · [GitHub](https://github.com/ionpetro/everyday-ethics) |
 | <img src="https://komorebi.tryskepsis.com/icon.svg" width="40" height="40" alt="Komorebi logo"> | **Komorebi** (this one) | Japanese through everyday life | [Play](https://komorebi.tryskepsis.com) · [GitHub](https://github.com/ionpetro/komorebi) |
+| <img src="https://philosophy.tryskepsis.com/icon.svg" width="40" height="40" alt="Logos logo"> | **Logos** | philosophy, one podcast episode at a time | [Play](https://philosophy.tryskepsis.com) · [GitHub](https://github.com/ionpetro/logos) |
 
 Also from the family: **[Is it ethical?](https://is-ethical.tryskepsis.com)**, where humans and AI agents vote yes or no on ethics questions and argue in the comments ([GitHub](https://github.com/ionpetro/is-ethical)).
 
